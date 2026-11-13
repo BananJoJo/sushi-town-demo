@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#faf7f2">
+  <title>Sushi Town — концепт онлайн-меню</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script defer src="cart.js"></script>
+</head>
+<body>
+  <header class="wrap top">
+    <a class="wordmark" href="./"><span aria-hidden="true">✦</span> Sushi Town</a>
+    <a class="nav" href="#menu">Меню <span aria-hidden="true">↘</span></a>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <div class="copy">
+        <h1 id="title">Суши.<br><em>Когда хочется.</em></h1>
+        <p>Выбери любимые роллы и собери заказ за пару нажатий.</p>
+        <a class="button" href="#menu">Смотреть меню <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="scene" aria-hidden="true">
+        <span class="spark first">✧</span><span class="spark second">✦</span>
+        <svg viewBox="0 0 540 465" class="cup" focusable="false">
+ <defs>
+  <linearGradient id="nori" x2="1" y2="1"><stop stop-color="#34493e"/><stop offset="1" stop-color="#172c26"/></linearGradient>
+  <linearGradient id="salmon" x2="1" y2="1"><stop stop-color="#ff9f80"/><stop offset="1" stop-color="#e56b55"/></linearGradient>
+  <linearGradient id="plate" x2="0" y2="1"><stop stop-color="#fffdf9"/><stop offset="1" stop-color="#e9d5c8"/></linearGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="13"/></filter>
+  <g id="roll">
+   <path d="M-83 0v69c0 63 166 63 166 0V0Z" fill="url(#nori)"/>
+   <ellipse rx="83" ry="57" fill="#283d33"/>
+   <ellipse rx="75" ry="50" fill="#fff9ec"/>
+   <ellipse rx="45" ry="29" fill="url(#salmon)"/>
+   <path d="M-18 17Q-7-30 34-16L31 6Q13 29-18 17Z" fill="#789d67"/>
+   <path d="M-35-8Q-19-22-7-10M-30 6Q-17-6-8-1" fill="none" stroke="#ffd5bb" stroke-width="4" stroke-linecap="round"/>
+   <path d="M-64 3l7 3m7-28 8-2m50-13 7 1m42 18 7 4m-19 41 7-3m-58 17 7-1m-50-17 6 4" fill="none" stroke="#e4d4bc" stroke-width="3" stroke-linecap="round"/>
+  </g>
+ </defs>
+ <ellipse cx="274" cy="369" rx="202" ry="39" fill="#985b4c" opacity=".24" filter="url(#shadow)"/>
+ <ellipse cx="267" cy="329" rx="202" ry="60" fill="url(#plate)"/>
+ <ellipse cx="267" cy="319" rx="191" ry="52" fill="#fffdfa"/>
+ <ellipse cx="267" cy="319" rx="159" ry="40" fill="none" stroke="#efded3" stroke-width="2"/>
+ <use href="#roll" transform="translate(326 174) rotate(9) scale(.88)"/>
+ <use href="#roll" transform="translate(213 215) rotate(-8)"/>
+ <circle class="steam one" cx="158" cy="143" r="5" fill="#d65d48"/>
+ <circle class="steam two" cx="375" cy="127" r="6" fill="#739274"/>
+ <circle class="steam three" cx="281" cy="112" r="4" fill="#d65d48"/>
+</svg>
+      </div>
+    </section>
+    <section class="menu" id="menu" tabindex="-1" aria-labelledby="menu-title">
+      <div class="section-head"><h2 id="menu-title">Меню Sushi Town</h2><p>Демо меню · позиции и цены для примера</p></div>
+      <div class="tiles">
+        <article data-price="390"><span class="icon" aria-hidden="true">✦</span><h3>Филадельфия</h3><p>Лосось, сливочный сыр и огурец</p><div class="dish-action"><strong>390 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="340"><span class="icon" aria-hidden="true">✦</span><h3>Калифорния</h3><p>Краб, авокадо и икра тобико</p><div class="dish-action"><strong>340 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="420"><span class="icon" aria-hidden="true">✦</span><h3>Ролл с угрём</h3><p>Угорь, огурец и соус унаги</p><div class="dish-action"><strong>420 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="360"><span class="icon" aria-hidden="true">✦</span><h3>Запечённый ролл</h3><p>Краб и сырная шапочка</p><div class="dish-action"><strong>360 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="380"><span class="icon" aria-hidden="true">✦</span><h3>Темпура с креветкой</h3><p>Креветка в хрустящей панировке</p><div class="dish-action"><strong>380 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="230"><span class="icon" aria-hidden="true">✦</span><h3>Ролл с авокадо</h3><p>Авокадо, рис и нори</p><div class="dish-action"><strong>230 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="150"><span class="icon" aria-hidden="true">✦</span><h3>Суши с лососем</h3><p>Лосось на подушке из риса</p><div class="dish-action"><strong>150 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="170"><span class="icon" aria-hidden="true">✦</span><h3>Гункан с креветкой</h3><p>Креветка и соус спайси</p><div class="dish-action"><strong>170 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="990"><span class="icon" aria-hidden="true">✦</span><h3>Сет «Город»</h3><p>Три ролла на компанию</p><div class="dish-action"><strong>990 ₽</strong><button type="button">Добавить</button></div></article>
+        <article data-price="190"><span class="icon" aria-hidden="true">✦</span><h3>Мисо-суп</h3><p>Мисо, тофу и водоросли</p><div class="dish-action"><strong>190 ₽</strong><button type="button">Добавить</button></div></article>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><strong>Sushi Town</strong><span>Концепт сайта · демонстрация</span></footer>
+  <button type="button" class="button cart-open" id="cart-open" aria-haspopup="dialog" hidden>Корзина <span id="cart-summary"></span></button>
+  <span class="sr-only" role="status" id="cart-status"></span>
+  <dialog id="cart" aria-labelledby="cart-title">
+    <div class="cart-head"><h2 id="cart-title">Корзина</h2><form method="dialog"><button aria-label="Закрыть корзину" autofocus>×</button></form></div>
+    <p id="cart-empty">Корзина пока пуста.</p>
+    <ul id="cart-items"></ul>
+    <div id="cart-checkout" hidden>
+      <p class="cart-total">Итого <strong id="cart-total"></strong></p>
+      <button type="button" class="button" id="order-preview" aria-expanded="false" aria-controls="order-draft">Показать текст заказа</button>
+      <div id="order-draft" hidden><pre id="order-text"></pre><p>В демо заказ не отправляется.</p></div>
+    </div>
+  </dialog>
+</body>
+</html>

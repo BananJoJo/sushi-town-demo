@@ -1,0 +1,104 @@
+@font-face{font-family:Onest;src:url("onest.ttf") format("truetype");font-weight:100 900;font-display:swap}
+*{box-sizing:border-box}
+:root{color-scheme:dark;--milk:#f9e8d4;--muted:#dfbfa6;--line:#edc49d44;--dark:#281713;--serif:Georgia,"Times New Roman",serif}
+body{margin:0;background:radial-gradient(ellipse at 72% 0%,#533125,transparent 48%),var(--dark);color:var(--milk);font:16px/1.55 Onest,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid #ffe2ac;outline-offset:5px}
+h1,h2,h3,p{margin:0}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.top,.footer{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.wordmark{font:700 25px var(--serif);letter-spacing:-.035em}.wordmark span{color:#e6ad76;margin-right:6px}
+.nav{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:5px 16px;border-radius:9px}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;min-height:530px;overflow:hidden;border-radius:28px;background:linear-gradient(120deg,#3c231c 12%,#59352a 60%,#794a36)}
+.copy{padding:clamp(25px,5vw,72px);position:relative;z-index:1}
+h1{font:400 clamp(50px,7vw,99px)/.96 var(--serif);letter-spacing:-.065em}
+h1 em{color:#ffd0a4;font-weight:400}
+.copy p{color:#efd5be;margin:22px 0;max-width:30ch}
+.button{display:inline-flex;align-items:center;gap:16px;min-height:50px;padding:8px 18px;border-radius:9px;background:#f5d4ac;color:#3a2119;font-weight:780}
+.button:hover{background:#ffe8c9}.nav:hover{background:#edc49d22}
+.scene{position:relative;isolation:isolate;display:grid;place-items:center;background:radial-gradient(ellipse at center,#dc97695c,transparent 70%);min-width:0}
+.cup{z-index:1;width:min(100%,540px);height:auto}
+.spark{position:absolute;color:#ffdaa9;font-size:28px;line-height:1}.first{top:21%;right:15%}.second{bottom:30%;left:11%;font-size:18px}
+.steam{opacity:.46}
+.menu{padding-block:48px 32px;scroll-margin-top:10px}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:17px}
+h2{font:400 clamp(33px,5vw,55px)/1.04 var(--serif);letter-spacing:-.05em}
+.section-head p,.footer{color:var(--muted);font-size:14px}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tiles article{padding:21px;border-radius:14px;background:#38221b}
+.icon{display:grid;place-items:center;width:42px;height:42px;border-radius:8px;background:#edb98b24;color:#ffd0a4;margin-bottom:13px}
+h3{font:400 27px var(--serif)}.tiles p{color:var(--muted);margin-top:5px}
+.footer{padding-bottom:76px}
+@media(max-width:760px){
+  .wrap{width:calc(100% - 30px)}.top,.footer{min-height:64px}
+  .hero{grid-template-columns:1fr;min-height:0;border-radius:20px}
+  .copy{padding-bottom:0}
+  .cup{width:min(91%,410px)}
+  .menu{padding-top:32px}
+}
+@media(max-width:550px){.tiles{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.footer{font-size:12px}}
+@media(prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .copy{animation:arrive .65s ease-out both}
+  .steam{animation:rise 4.5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .two{animation-delay:-1.5s}.three{animation-delay:-3s}
+  .button,.nav{transition:background-color .2s,scale .16s}.button:active,.nav:active{scale:.97}
+  @keyframes rise{0%{opacity:0;transform:translateY(10px) scale(.91)}45%{opacity:.62}100%{opacity:0;transform:translateY(-18px) scale(1.05)}}
+  @keyframes arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+}
+.nav{background:#edc49d12}
+.tiles article{display:flex;flex-direction:column;background:linear-gradient(145deg,#482b21,#362018)}
+.dish-action,.cart-head,.cart-total,#cart-items li,.step{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dish-action{margin-top:auto;padding-top:18px}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid #ffe2ac;outline-offset:4px}
+.dish-action button,.cart-head button,.step button{min-height:44px;min-width:44px;padding:5px 12px;border:0;border-radius:8px;background:#684536;color:var(--milk);font-weight:750}
+.dish-action button:hover,.step button:hover,.cart-head button:hover{background:#805341}
+.cart-open{position:fixed;z-index:2;right: max(15px,env(safe-area-inset-right));bottom:max(15px,env(safe-area-inset-bottom));border:0;box-shadow:0 5px 24px #160c08a0}
+.cart-open[hidden]{display:none}
+#cart{width:min(510px,calc(100% - 24px));max-height:86dvh;padding:clamp(16px,4vw,30px);border:0;border-radius:19px;background:#40261e;color:var(--milk);box-shadow:0 16px 65px #160c08ba}
+#cart::backdrop{background:#1a0d09b8}
+#cart-items{list-style:none;margin:0;padding:0}
+#cart-items li{padding:9px 0}
+.cart-head{margin-bottom:15px}.cart-total{margin:14px 0}
+#order-preview{border:0}
+#order-draft{margin-top:12px;padding:12px;border-radius:8px;background:#2b1813}
+#order-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(prefers-reduced-motion:no-preference){
+  .copy>*{animation:arrive .8s ease-out both}
+  .copy p{animation-delay:.12s}.copy .button{animation-delay:.24s}
+  .scene{animation:arrive .9s .12s ease-out both}
+  .cup{animation:cup-drift 6s ease-in-out infinite}
+  .steam{stroke-width:7;animation-duration:3.6s}
+  .two{animation-delay:-1.2s}.three{animation-delay:-2.4s}
+  .tiles article.arrived{animation:card-in .55s cubic-bezier(.18,.67,.25,1) both}
+  .tiles article:nth-child(3n + 2){animation-delay:65ms}
+  .tiles article:nth-child(3n){animation-delay:130ms}
+  .tiles article,.dish-action button{transition:translate .22s ease,box-shadow .22s ease,background-color .2s ease,scale .14s}
+  .dish-action button:active{scale:.94}
+  @keyframes rise{0%{opacity:0;transform:translateY(12px) scale(.9)}40%{opacity:.84}100%{opacity:0;transform:translateY(-30px) scale(1.14)}}
+  @keyframes cup-drift{0%,100%{transform:translateY(3px) rotate(-1.6deg)}50%{transform:translateY(-9px) rotate(1.6deg)}}
+  @keyframes card-in{from{opacity:.28;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+  @media(hover:hover){.tiles article:hover{translate:0 -6px;box-shadow:0 12px 28px #160b0870}}
+}
+/* Sushi Town — warm white surfaces with salmon and nori accents. */
+:root{color-scheme:light;--milk:#302520;--muted:#62504a;--line:#e6d7cc;--dark:#faf7f2}
+body{background:radial-gradient(ellipse at 80% 0%,#ffe9dc,transparent 48%),var(--dark)}
+.hero{background:linear-gradient(118deg,#fffdfa 15%,#fff0e5 64%,#f9d7c5)}
+.scene{background:radial-gradient(ellipse at center,#ef9b7550,transparent 68%)}
+.wordmark span,.spark{color:#b14534}
+h1 em{color:#a83c2c}
+.copy p{color:var(--muted)}
+.nav{background:#fffdfa}
+.button{background:#a83c2c;color:#fff}
+.button:hover{background:#852d21}
+.tiles article{background:#fffdfa;box-shadow:0 3px 18px #733b2310}
+.icon{background:#f9e7de;color:#a83c2c}
+.dish-action button,.cart-head button,.step button{background:#f7e6dd;color:#613228}
+.dish-action button:hover,.cart-head button:hover,.step button:hover{background:#efcdbf}
+.cart-open{box-shadow:0 5px 24px #5a302344}
+#cart{background:#fffdfa;color:var(--milk)}
+#order-draft{background:#f7e6dd}
+a:focus-visible,button:focus-visible{outline-color:#a83c2c}
+@media(prefers-reduced-motion:no-preference) and (hover:hover){.tiles article:hover{box-shadow:0 12px 28px #733b2324}}
